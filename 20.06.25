@@ -1,0 +1,244 @@
+1. Check Leap Year
+public class LeapYear {
+    public static void main(String[] args) {
+        int year = 2024;
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not a Leap Year");
+    }
+}
+ 2. GCD of Two Numbers
+public class GCD {
+    public static void main(String[] args) {
+        int a = 36, b = 60;
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        System.out.println("GCD is: " + a);
+    }
+}
+ 3. LCM of Two Numbers
+public class LCM {
+    public static void main(String[] args) {
+        int a = 15, b = 20;
+        int lcm = (a * b) / gcd(a, b);
+        System.out.println("LCM is: " + lcm);
+    }
+
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int t = b;
+            b = a % b;
+            a = t;
+        }
+        return a;
+    }
+}
+ 4. Check Alphabet, Digit, or Special Character
+public class CharacterType {
+    public static void main(String[] args) {
+        char ch = '#';
+        if (Character.isLetter(ch))
+            System.out.println("Alphabet");
+        else if (Character.isDigit(ch))
+            System.out.println("Digit");
+        else
+            System.out.println("Special Character");
+    }
+}
+ 5. Count Number of Words in a String
+public class WordCount {
+    public static void main(String[] args) {
+        String str = "Java is fun";
+        String[] words = str.trim().split("\\s+");
+        System.out.println("Words: " + words.length);
+    }
+}
+ 6. Check if String is Palindrome
+public class StringPalindrome {
+    public static void main(String[] args) {
+        String str = "madam";
+        String rev = new StringBuilder(str).reverse().toString();
+        System.out.println(str.equals(rev) ? "Palindrome" : "Not Palindrome");
+    }
+}
+ 7. Count Frequency of Character
+public class CharFrequency {
+    public static void main(String[] args) {
+        String str = "hello";
+        char ch = 'l';
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (c == ch) count++;
+        }
+        System.out.println("Frequency of '" + ch + "': " + count);
+    }
+}
+ 8. Reverse a String
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Java";
+        String rev = "";
+        for (int i = str.length() - 1; i >= 0; i--)
+            rev += str.charAt(i);
+        System.out.println("Reversed: " + rev);
+    }
+}
+ 9. Remove Duplicates from a String
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        String str = "programming";
+        String result = "";
+        for (char c : str.toCharArray()) {
+            if (result.indexOf(c) == -1)
+                result += c;
+        }
+        System.out.println("After removing duplicates: " + result);
+    }
+}
+ 10. Check Anagram Strings
+import java.util.Arrays;
+
+public class Anagram {
+    public static void main(String[] args) {
+        String str1 = "listen", str2 = "silent";
+        char[] a = str1.toCharArray();
+        char[] b = str2.toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(b);
+        System.out.println(Arrays.equals(a, b) ? "Anagram" : "Not Anagram");
+    }
+}
+ 11. Sum of Array Elements
+public class ArraySum {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int num : arr)
+            sum += num;
+        System.out.println("Sum: " + sum);
+    }
+}
+ 12. Find Maximum and Minimum in Array
+public class MaxMinArray {
+    public static void main(String[] args) {
+        int[] arr = {12, 4, 7, 9, 15};
+        int max = arr[0], min = arr[0];
+        for (int num : arr) {
+            if (num > max) max = num;
+            if (num < min) min = num;
+        }
+        System.out.println("Max: " + max + ", Min: " + min);
+    }
+}
+ 13. 2D Array Input and Output
+public class MatrixPrint {
+    public static void main(String[] args) {
+        int[][] matrix = {{1,2,3}, {4,5,6}};
+        for (int[] row : matrix) {
+            for (int val : row)
+                System.out.print(val + " ");
+            System.out.println();
+        }
+    }
+}
+ 14. Transpose of Matrix
+public class TransposeMatrix {
+    public static void main(String[] args) {
+        int[][] a = {{1, 2}, {3, 4}};
+        for (int i = 0; i < a[0].length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                System.out.print(a[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+ 15. Recursion - Sum of Natural Numbers
+public class RecursiveSum {
+    static int sum(int n) {
+        return (n == 0) ? 0 : n + sum(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sum: " + sum(10));
+    }
+}
+16. Recursive Factorial
+public class RecursiveFactorial {
+    static int factorial(int n) {
+        return (n == 0) ? 1 : n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Factorial: " + factorial(5));
+    }
+}
+ 17. Class and Object Example
+class Student {
+    String name;
+    int age;
+
+    void display() {
+        System.out.println(name + " - " + age);
+    }
+}
+
+public class StudentDemo {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.name = "Alice";
+        s.age = 20;
+        s.display();
+    }
+}
+ 18. Constructor Example
+class Person {
+    String name;
+    Person(String n) {
+        name = n;
+    }
+
+    void show() {
+        System.out.println("Name: " + name);
+    }
+}
+
+public class ConstructorExample {
+    public static void main(String[] args) {
+        Person p = new Person("John");
+        p.show();
+    }
+}
+ 19. Static Method Example
+class MathUtil {
+    static int square(int x) {
+        return x * x;
+    }
+}
+
+public class StaticDemo {
+    public static void main(String[] args) {
+        System.out.println("Square: " + MathUtil.square(6));
+    }
+}
+ 20. Method Overloading
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Overloading {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(5, 7));
+        System.out.println(calc.add(3.5, 2.5));
+    }
+}
