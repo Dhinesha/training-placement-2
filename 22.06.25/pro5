@@ -1,0 +1,69 @@
+ 1. Check Armstrong Number for n Digits
+public class ArmstrongNDigits {
+    public static void main(String[] args) {
+        int num = 9474, sum = 0, temp = num, digits = String.valueOf(num).length();
+        while (temp != 0) {
+            sum += Math.pow(temp % 10, digits);
+            temp /= 10;
+        }
+        System.out.println(num + (sum == num ? " is Armstrong" : " is not Armstrong"));
+    }
+}
+ 2. Decimal to Binary Conversion
+public class DecimalToBinary {
+    public static void main(String[] args) {
+        int decimal = 13;
+        String binary = Integer.toBinaryString(decimal);
+        System.out.println("Binary: " + binary);
+    }
+}
+3. Binary to Decimal Conversion
+public class BinaryToDecimal {
+    public static void main(String[] args) {
+        String binary = "1010";
+        int decimal = Integer.parseInt(binary, 2);
+        System.out.println("Decimal: " + decimal);
+    }
+}
+4. Print Floyd’s Triangle
+
+public class FloydTriangle {
+    public static void main(String[] args) {
+        int rows = 4, num = 1;
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++)
+                System.out.print(num++ + " ");
+            System.out.println();
+        }
+    }
+}
+5. Simple Banking System with Class
+class BankAccount {
+    String name;
+    int balance = 0;
+
+    void deposit(int amount) {
+        balance += amount;
+    }
+
+    void withdraw(int amount) {
+        if (amount <= balance)
+            balance -= amount;
+        else
+            System.out.println("Insufficient funds");
+    }
+
+    void display() {
+        System.out.println(name + "'s Balance: " + balance);
+    }
+}
+
+public class BankDemo {
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.name = "Alice";
+        acc.deposit(1000);
+        acc.withdraw(300);
+        acc.display();
+    }
+}
