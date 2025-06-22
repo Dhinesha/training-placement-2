@@ -1,0 +1,61 @@
+ 1. Check if Number is Perfect
+public class PerfectNumber {
+    public static void main(String[] args) {
+        int num = 28, sum = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0)
+                sum += i;
+        }
+        System.out.println(num + (sum == num ? " is Perfect" : " is not Perfect"));
+    }
+}
+ 2. Check Strong Number
+public class StrongNumber {
+    static int factorial(int n) {
+        int f = 1;
+        for (int i = 2; i <= n; i++) f *= i;
+        return f;
+    }
+
+    public static void main(String[] args) {
+        int num = 145, sum = 0, temp = num;
+        while (temp != 0) {
+            sum += factorial(temp % 10);
+            temp /= 10;
+        }
+        System.out.println(num + (sum == num ? " is Strong" : " is not Strong"));
+    }
+}
+3. Check Harshad Number
+public class HarshadNumber {
+    public static void main(String[] args) {
+        int num = 18, sum = 0, temp = num;
+        while (temp != 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+        System.out.println(num + (num % sum == 0 ? " is Harshad" : " is not Harshad"));
+    }
+}
+ 4. Sum of Elements in 2D Array
+
+public class MatrixSum {
+    public static void main(String[] args) {
+        int[][] matrix = {{1, 2}, {3, 4}};
+        int sum = 0;
+        for (int[] row : matrix)
+            for (int val : row)
+                sum += val;
+        System.out.println("Sum = " + sum);
+    }
+}
+ 5. Reverse Words in a Sentence
+
+public class ReverseWords {
+    public static void main(String[] args) {
+        String sentence = "Java is powerful";
+        String[] words = sentence.split(" ");
+        for (int i = words.length - 1; i >= 0; i--)
+            System.out.print(words[i] + " ");
+    }
+}
