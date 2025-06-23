@@ -1,0 +1,90 @@
+1. Check if a Number is Palindrome using String
+public class PalindromeString {
+    public static void main(String[] args) {
+        int num = 12321;
+        String original = String.valueOf(num);
+        String reversed = new StringBuilder(original).reverse().toString();
+
+        System.out.println(original.equals(reversed) ? "Palindrome" : "Not Palindrome");
+    }
+}
+2. Print Hollow Square Pattern
+
+public class HollowSquare {
+    public static void main(String[] args) {
+        int size = 5;
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
+                if (i == 1 || i == size || j == 1 || j == size)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+}
+3. Print Right-Angled Triangle of Alphabets
+
+public class AlphabetTriangle {
+    public static void main(String[] args) {
+        char ch = 'A';
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch + " ");
+            }
+            ch++;
+            System.out.println();
+        }
+    }
+}
+ 4. Sum of Prime Numbers up to N
+
+public class SumOfPrimes {
+    static boolean isPrime(int n) {
+        if (n <= 1) return false;
+        for (int i = 2; i <= n / 2; i++)
+            if (n % i == 0) return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int n = 20, sum = 0;
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i))
+                sum += i;
+        }
+        System.out.println("Sum of primes up to " + n + ": " + sum);
+    }
+}
+ 5. Array of Objects (Student Details Example)
+
+class Student {
+    String name;
+    int age;
+
+    void setDetails(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class StudentArray {
+    public static void main(String[] args) {
+        Student[] students = new Student[3];
+        for (int i = 0; i < 3; i++) {
+            students[i] = new Student();
+        }
+
+        students[0].setDetails("Alice", 20);
+        students[1].setDetails("Bob", 21);
+        students[2].setDetails("Charlie", 19);
+
+        for (Student s : students)
+            s.display();
+    }
+}
