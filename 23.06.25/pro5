@@ -1,0 +1,68 @@
+1. Generate Random Number
+
+import java.util.Random;
+
+public class RandomNumber {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int randomNum = rand.nextInt(100); // 0 to 99
+        System.out.println("Random number: " + randomNum);
+    }
+}
+ 2. Get Current Date and Time
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class DateTimeExample {
+    public static void main(String[] args) {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("Current date and time: " + now);
+    }
+}
+ 3. Print Pascal's Triangle
+
+public class PascalsTriangle {
+    public static void main(String[] args) {
+        int rows = 5;
+        for (int i = 0; i < rows; i++) {
+            int num = 1;
+            for (int j = 0; j < rows - i; j++)
+                System.out.print(" ");
+            for (int k = 0; k <= i; k++) {
+                System.out.print(num + " ");
+                num = num * (i - k) / (k + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+4. Recursive Power Calculation (x^n)
+
+public class PowerRecursive {
+    static int power(int x, int n) {
+        if (n == 0) return 1;
+        return x * power(x, n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("3^4 = " + power(3, 4));
+    }
+}
+ 5. Find Second Largest Element in Array
+
+public class SecondLargest {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 9, 1, 7};
+        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num > first) {
+                second = first;
+                first = num;
+            } else if (num > second && num != first) {
+                second = num;
+            }
+        }
+        System.out.println("Second largest: " + second);
+    }
+}
