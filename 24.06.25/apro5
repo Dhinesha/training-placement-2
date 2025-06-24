@@ -1,0 +1,64 @@
+6. Reverse Elements in an Array
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.print("Reversed Array: ");
+        for (int i = arr.length - 1; i >= 0; i--)
+            System.out.print(arr[i] + " ");
+    }
+}
+ 7. Sum of Even and Odd Numbers from 1 to N
+
+public class SumEvenOdd {
+    public static void main(String[] args) {
+        int n = 10, even = 0, odd = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) even += i;
+            else odd += i;
+        }
+        System.out.println("Sum of Even: " + even + ", Odd: " + odd);
+    }
+}
+8. Check Vowel or Consonant Using Switch
+
+public class VowelSwitch {
+    public static void main(String[] args) {
+        char ch = 'e';
+        switch (Character.toLowerCase(ch)) {
+            case 'a': case 'e': case 'i': case 'o': case 'u':
+                System.out.println(ch + " is a Vowel"); break;
+            default:
+                System.out.println(ch + " is a Consonant");
+        }
+    }
+}
+9. Simple Calculator Using If-Else
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        int a = 8, b = 4;
+        char op = '+';
+
+        if (op == '+') System.out.println("Sum: " + (a + b));
+        else if (op == '-') System.out.println("Difference: " + (a - b));
+        else if (op == '*') System.out.println("Product: " + (a * b));
+        else if (op == '/') System.out.println("Quotient: " + (a / b));
+        else System.out.println("Invalid operator");
+    }
+}
+ 10. Count Positive, Negative, and Zero in Array
+
+public class CountElements {
+    public static void main(String[] args) {
+        int[] arr = {-3, 0, 4, -1, 2, 0, 6};
+        int pos = 0, neg = 0, zero = 0;
+
+        for (int n : arr) {
+            if (n > 0) pos++;
+            else if (n < 0) neg++;
+            else zero++;
+        }
+
+        System.out.println("Positive: " + pos + ", Negative: " + neg + ", Zero: " + zero);
+    }
+}
