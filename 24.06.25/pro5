@@ -1,0 +1,54 @@
+1. Check if a Number is a Power of Two
+
+public class PowerOfTwo {
+    public static void main(String[] args) {
+        int n = 16;
+        boolean isPower = (n > 0) && ((n & (n - 1)) == 0);
+        System.out.println(n + (isPower ? " is" : " is not") + " a power of 2");
+    }
+}
+ 2. Check if a Year is Century Year
+
+public class CenturyYear {
+    public static void main(String[] args) {
+        int year = 2000;
+        System.out.println(year + ((year % 100 == 0) ? " is" : " is not") + " a century year");
+    }
+}
+ 3. Convert Celsius to Fahrenheit
+
+public class CelsiusToFahrenheit {
+    public static void main(String[] args) {
+        double celsius = 36.6;
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.println("Fahrenheit: " + fahrenheit);
+    }
+}
+ 4. Print Diamond Star Pattern
+
+public class DiamondPattern {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j < n; j++) System.out.print(" ");
+            for (int j = 1; j <= (2 * i - 1); j++) System.out.print("*");
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = n; j > i; j--) System.out.print(" ");
+            for (int j = 1; j <= (2 * i - 1); j++) System.out.print("*");
+            System.out.println();
+        }
+    }
+}
+5. Find All Divisors of a Number
+
+public class Divisors {
+    public static void main(String[] args) {
+        int num = 28;
+        System.out.print("Divisors of " + num + ": ");
+        for (int i = 1; i <= num; i++)
+            if (num % i == 0)
+                System.out.print(i + " ");
+    }
+}
