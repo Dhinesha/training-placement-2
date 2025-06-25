@@ -1,0 +1,62 @@
+1. Hello World
+print("Hello, World!")
+2. Add Two Numbers
+a = 10
+b = 5
+print("Sum:", a + b)
+3. Swap Two Variables
+
+a = 5
+b = 10
+a, b = b, a
+print("a =", a, "b =", b)
+4. Check Even or Odd
+
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+5. Factorial of a Number
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))
+6. Fibonacci Series
+
+n = 10
+a, b = 0, 1
+for _ in range(n):
+    print(a, end=' ')
+    a, b = b, a + b
+7. Prime Number Check
+
+num = int(input("Enter a number: "))
+if num > 1:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime")
+else:
+    print("Not Prime")
+8. Reverse a String
+s = "python"
+print(s[::-1])
+9. Palindrome Check
+s = input("Enter a string: ")
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+10. Sum of Digits
+num = 1234
+sum = 0
+while num:
+    sum += num % 10
+    num //= 10
+print("Sum of digits:", sum)
