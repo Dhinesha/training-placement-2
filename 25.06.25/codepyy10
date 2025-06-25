@@ -1,0 +1,61 @@
+11. Find Largest of Three Numbers
+a, b, c = 10, 20, 15
+print("Largest:", max(a, b, c))
+12. Count Vowels in a String
+s = "hello world"
+vowels = "aeiou"
+count = sum(1 for char in s if char in vowels)
+print("Vowel count:", count)
+13. Simple Calculator
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+op = input("Enter operator (+, -, *, /): ")
+
+if op == '+':
+    print(a + b)
+elif op == '-':
+    print(a - b)
+elif op == '*':
+    print(a * b)
+elif op == '/':
+    print(a / b)
+else:
+    print("Invalid operator")
+14. Armstrong Number
+num = int(input("Enter number: "))
+sum = 0
+temp = num
+while temp:
+    digit = temp % 10
+    sum += digit ** 3
+    temp //= 10
+if sum == num:
+    print("Armstrong")
+else:
+    print("Not Armstrong")
+15. Multiplication Table
+n = 5
+for i in range(1, 11):
+    print(f"{n} x {i} = {n*i}")
+16. Check Leap Year
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap Year")
+else:
+    print("Not Leap Year")
+17. Count Words in a String
+s = "This is a Python program"
+words = s.split()
+print("Number of words:", len(words))
+18. Find GCD of Two Numbers
+import math
+a = 12
+b = 18
+print("GCD:", math.gcd(a, b))
+19. Convert Celsius to Fahrenheit
+c = float(input("Enter Celsius: "))
+f = (c * 9/5) + 32
+print("Fahrenheit:", f)
+20. List Comprehension Example
+squares = [x**2 for x in range(10)]
+print(squares)
