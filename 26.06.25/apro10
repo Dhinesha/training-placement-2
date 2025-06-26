@@ -1,0 +1,67 @@
+1. Check for Anagram
+str1 = "listen"
+str2 = "silent"
+if sorted(str1) == sorted(str2):
+    print("Anagram")
+else:
+    print("Not Anagram")
+2. Remove Punctuation from String
+import string
+text = "Hello!!! How are you??"
+no_punct = ''.join(ch for ch in text if ch not in string.punctuation)
+print(no_punct)
+3. Count Frequency of Characters
+text = "banana"
+freq = {}
+for ch in text:
+    freq[ch] = freq.get(ch, 0) + 1
+print(freq)
+4. Linear Search
+arr = [10, 20, 30, 40]
+target = 30
+found = False
+for i in arr:
+    if i == target:
+        found = True
+        break
+print("Found" if found else "Not Found")
+5. Binary Search (List Must be Sorted)
+arr = [10, 20, 30, 40, 50]
+low = 0
+high = len(arr) - 1
+x = 30
+while low <= high:
+    mid = (low + high) // 2
+    if arr[mid] == x:
+        print("Found at index", mid)
+        break
+    elif arr[mid] < x:
+        low = mid + 1
+    else:
+        high = mid - 1
+else:
+    print("Not Found")
+6. Bubble Sort
+arr = [64, 25, 12, 22, 11]
+n = len(arr)
+for i in range(n):
+    for j in range(0, n - i - 1):
+        if arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+print("Sorted array:", arr)
+7. Find Minimum and Maximum in List
+lst = [10, 20, 5, 8, 25]
+print("Min:", min(lst), "Max:", max(lst))
+8. Check if List is Palindrome
+lst = [1, 2, 3, 2, 1]
+print("Palindrome" if lst == lst[::-1] else "Not Palindrome")
+9. Merge Two Lists and Sort
+a = [1, 4, 6]
+b = [2, 3, 5]
+merged = sorted(a + b)
+print("Merged List:", merged)
+40. Create Dictionary from Two Lists
+keys = ['name', 'age', 'gender']
+values = ['Alice', 25, 'Female']
+d = dict(zip(keys, values))
+print(d)
