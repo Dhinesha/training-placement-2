@@ -1,0 +1,62 @@
+1. Find ASCII Value of a Character
+ch = 'A'
+print("ASCII value of", ch, "is", ord(ch))
+2. Check if Character is Vowel or Consonant
+ch = input("Enter a character: ").lower()
+if ch in 'aeiou':
+    print("Vowel")
+else:
+    print("Consonant")
+3. Find All Prime Numbers in a Range
+
+for num in range(2, 50):
+    for i in range(2, num):
+        if num % i == 0:
+            break
+    else:
+        print(num, end=' ')
+4. Simple Interest Calculation
+p = 1000
+r = 5
+t = 2
+si = (p * r * t) / 100
+print("Simple Interest:", si)
+5. Compound Interest
+p = 1000
+r = 5
+t = 2
+ci = p * ((1 + r/100) ** t) - p
+print("Compound Interest:", ci)
+6. Power of a Number
+base = 2
+exp = 5
+print("Result:", base ** exp)
+7. Check for Strong Number
+import math
+num = int(input("Enter a number: "))
+temp = num
+sum = 0
+while temp:
+    digit = temp % 10
+    sum += math.factorial(digit)
+    temp //= 10
+print("Strong Number" if sum == num else "Not Strong Number")
+8. Check if Number is Perfect
+num = int(input("Enter a number: "))
+sum = 0
+for i in range(1, num):
+    if num % i == 0:
+        sum += i
+print("Perfect Number" if sum == num else "Not Perfect Number")
+9. Print a Pyramid Pattern
+rows = 5
+for i in range(1, rows + 1):
+    print(' ' * (rows - i) + '* ' * i)
+0. Print Floyd’s Triangle
+n = 1
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(i):
+        print(n, end=' ')
+        n += 1
+    print()
