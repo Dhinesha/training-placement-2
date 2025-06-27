@@ -1,0 +1,54 @@
+1. Filter Even Numbers Using filter()
+nums = [1, 2, 3, 4, 5, 6]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+print("Even numbers:", evens)
+2. Sum of List Using reduce()
+from functools import reduce
+nums = [1, 2, 3, 4]
+total = reduce(lambda x, y: x + y, nums)
+print("Sum:", total)
+3. Map Function to Square Each Element
+nums = [1, 2, 3, 4]
+squares = list(map(lambda x: x**2, nums))
+print(squares)
+4. Use Recursion to Calculate Sum of First n Numbers
+def recursive_sum(n):
+    if n == 0:
+        return 0
+    return n + recursive_sum(n-1)
+
+print("Sum:", recursive_sum(5))
+5. Check Whether a String is a Pangram
+import string
+s = "The quick brown fox jumps over the lazy dog"
+if set(string.ascii_lowercase) <= set(s.lower()):
+    print("Pangram")
+else:
+    print("Not Pangram")
+6. Simple Class and Object
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello,", self.name)
+
+s = Student("John")
+s.greet()
+7. Write to a Text File
+with open("sample.txt", "w") as f:
+    f.write("Hello, this is a file write example.")
+8. Read from a Text File
+with open("sample.txt", "r") as f:
+    content = f.read()
+    print(content)
+9. Append Data to a File
+with open("sample.txt", "a") as f:
+    f.write("\nAppending a new line.")
+10. Exception Handling (Divide by Zero)
+try:
+    a = 10
+    b = 0
+    print(a / b)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
