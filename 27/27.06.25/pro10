@@ -1,0 +1,47 @@
+1. Count Occurrence of an Element in a List
+lst = [1, 2, 2, 3, 4, 2, 5]
+element = 2
+print("Count:", lst.count(element))
+2. Convert List to Set and Remove Duplicates
+lst = [1, 2, 2, 3, 4, 4, 5]
+unique = list(set(lst))
+print("Unique elements:", unique)
+3. Find the Length of a String Without Using len()
+s = "hello"
+count = 0
+for _ in s:
+    count += 1
+print("Length:", count)
+4. Find the Largest Word in a Sentence
+sentence = "Python is a powerful language"
+words = sentence.split()
+largest = max(words, key=len)
+print("Largest word:", largest)
+5. Check if a Number is a Palindrome
+num = 121
+if str(num) == str(num)[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+6. Reverse Each Word in a Sentence
+sentence = "Python is fun"
+reversed_words = ' '.join(word[::-1] for word in sentence.split())
+print(reversed_words)
+7. Count Even and Odd Numbers in a List
+lst = [1, 2, 3, 4, 5, 6]
+even = sum(1 for x in lst if x % 2 == 0)
+odd = len(lst) - even
+print("Even:", even, "Odd:", odd)
+8. Find Common Elements Between Two Lists
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
+common = list(set(a) & set(b))
+print("Common elements:", common)
+9. Convert Decimal to Binary, Octal, and Hex
+num = 25
+print("Binary:", bin(num))
+print("Octal:", oct(num))
+print("Hexadecimal:", hex(num))
+10. Lambda Function Example
+square = lambda x: x * x
+print("Square:", square(5))
